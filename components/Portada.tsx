@@ -9,12 +9,12 @@ interface PortadaProps {
 
 const Portada: React.FC<PortadaProps> = ({ onScrollToVideo }) => {
   return (
-    <header className="relative min-h-screen flex items-center justify-center text-black overflow-hidden bg-white">
+    <header className="relative min-h-0 lg:min-h-screen flex items-start lg:items-center justify-center text-black overflow-hidden bg-white">
       <div className="absolute inset-0 z-0">
         {/* Fondo blanco puro */}
         <div className="w-full h-full bg-white"></div>
       </div>
-      <div className="container mx-auto px-6 py-20 lg:py-20 pt-2 relative z-10 text-center">
+      <div className="container mx-auto px-6 py-12 lg:py-20 pt-2 relative z-10 text-center">
         {/* Layout Desktop: 2 columnas (Perfil | Formulario) */}
         <div className="hidden lg:inline-grid lg:grid-cols-[auto_auto] gap-2 lg:gap-x-[56px] items-center justify-items-center transform mx-auto">
           {/* Columna Izquierda: Perfil (imagen + botón) */}
@@ -25,7 +25,7 @@ const Portada: React.FC<PortadaProps> = ({ onScrollToVideo }) => {
         </div>
 
         {/* Layout Móvil/Tablet: Orden personalizado */}
-        <div className="lg:hidden flex flex-col items-center gap-6 -mt-10">
+  <div className="lg:hidden flex flex-col items-center gap-6 mt-4">
           {/* 1. Imagen circular y Botón Ver Video en la misma fila */}
           <div className="flex items-center gap-3 sm:gap-4 justify-center max-w-full px-2">
             {/* Imagen circular */}
